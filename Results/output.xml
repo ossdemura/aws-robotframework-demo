@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170912 09:39:31.659" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\juan.espinosa.JEELIS\Documents\workspace\workspace-aws-codebuild-robotframework\tests\amazon.robot" id="s1" name="Amazon">
+<kw type="setup" name="Insert Testing Data" library="Common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am setting up the test data...</arg>
+</arguments>
+<msg timestamp="20170912 09:39:31.826" level="INFO">I am setting up the test data...</msg>
+<status status="PASS" endtime="20170912 09:39:31.826" starttime="20170912 09:39:31.826"></status>
+</kw>
+<kw name="Custom Keyboard 1" library="Common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Doing keyboard 1...</arg>
+</arguments>
+<msg timestamp="20170912 09:39:31.827" level="INFO">Doing keyboard 1...</msg>
+<status status="PASS" endtime="20170912 09:39:31.827" starttime="20170912 09:39:31.827"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:31.827" starttime="20170912 09:39:31.827"></status>
+</kw>
+<kw name="Custom Keyboard 2" library="Common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Doing keyboard 2...</arg>
+</arguments>
+<msg timestamp="20170912 09:39:31.828" level="INFO">Doing keyboard 2...</msg>
+<status status="PASS" endtime="20170912 09:39:31.828" starttime="20170912 09:39:31.827"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:31.828" starttime="20170912 09:39:31.827"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${c_opts}</var>
+</assign>
+<msg timestamp="20170912 09:39:31.828" level="INFO">${c_opts} = &lt;selenium.webdriver.chrome.options.Options object at 0x031CCFF0&gt;</msg>
+<status status="PASS" endtime="20170912 09:39:31.828" starttime="20170912 09:39:31.828"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:31.829" starttime="20170912 09:39:31.828"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:31.829" starttime="20170912 09:39:31.829"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:31.830" starttime="20170912 09:39:31.829"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1024,768</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:31.830" starttime="20170912 09:39:31.830"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>crm_alias</arg>
+<arg>chrome_options=${c_opts}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:31.831" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" endtime="20170912 09:39:35.583" starttime="20170912 09:39:31.831"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:35.583" starttime="20170912 09:39:31.826"></status>
+</kw>
+<test id="s1-t1" name="User can search for products">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${c_opts}</var>
+</assign>
+<msg timestamp="20170912 09:39:35.586" level="INFO">${c_opts} = &lt;selenium.webdriver.chrome.options.Options object at 0x031E76F0&gt;</msg>
+<status status="PASS" endtime="20170912 09:39:35.586" starttime="20170912 09:39:35.585"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:35.586" starttime="20170912 09:39:35.586"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:35.587" starttime="20170912 09:39:35.586"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:35.587" starttime="20170912 09:39:35.587"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1024,768</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:35.588" starttime="20170912 09:39:35.587"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>crm_alias</arg>
+<arg>chrome_options=${c_opts}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:35.588" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" endtime="20170912 09:39:39.349" starttime="20170912 09:39:35.588"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:39.349" starttime="20170912 09:39:35.585"></status>
+</kw>
+<kw name="Search for Products" library="Amazon">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:39.352" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170912 09:39:44.170" starttime="20170912 09:39:39.351"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:44.171" starttime="20170912 09:39:39.350"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:44.430" starttime="20170912 09:39:44.171"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:44.431" starttime="20170912 09:39:44.171"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR_TEXT_BOX}</arg>
+<arg>"${SEARCH_TERM}"</arg>
+</arguments>
+<msg timestamp="20170912 09:39:44.431" level="INFO">Typing text '"Ferrari 458"' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170912 09:39:46.916" starttime="20170912 09:39:44.431"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:46.917" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20170912 09:39:49.146" starttime="20170912 09:39:46.917"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=s-result-count</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:49.189" starttime="20170912 09:39:49.147"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>id=s-result-count</arg>
+<arg>"${SEARCH_TERM}"</arg>
+</arguments>
+<msg timestamp="20170912 09:39:49.190" level="INFO">Verifying element 'id=s-result-count' contains text '"Ferrari 458"'.</msg>
+<status status="PASS" endtime="20170912 09:39:49.315" starttime="20170912 09:39:49.189"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:49.316" starttime="20170912 09:39:39.350"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170912 09:39:55.388" starttime="20170912 09:39:49.318"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:55.389" starttime="20170912 09:39:49.317"></status>
+</kw>
+<doc>This is the basic info about the test case</doc>
+<tags>
+<tag>Current</tag>
+</tags>
+<status status="PASS" endtime="20170912 09:39:55.389" critical="yes" starttime="20170912 09:39:35.583"></status>
+</test>
+<test id="s1-t2" name="User must sign to check out">
+<kw type="setup" name="Begin Web Test" library="Common">
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${c_opts}</var>
+</assign>
+<msg timestamp="20170912 09:39:55.395" level="INFO">${c_opts} = &lt;selenium.webdriver.chrome.options.Options object at 0x031E7B50&gt;</msg>
+<status status="PASS" endtime="20170912 09:39:55.395" starttime="20170912 09:39:55.394"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>headless</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:55.395" starttime="20170912 09:39:55.395"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>disable-gpu</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:55.397" starttime="20170912 09:39:55.396"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>no-sandbox</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:55.397" starttime="20170912 09:39:55.397"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${c_opts}</arg>
+<arg>add_argument</arg>
+<arg>window-size\=1024,768</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:39:55.398" starttime="20170912 09:39:55.398"></status>
+</kw>
+<kw name="Create Webdriver" library="Selenium2Library">
+<doc>Creates an instance of a WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>crm_alias</arg>
+<arg>chrome_options=${c_opts}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:55.399" level="INFO">Creating an instance of the Chrome WebDriver</msg>
+<status status="PASS" endtime="20170912 09:39:59.084" starttime="20170912 09:39:55.399"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:39:59.084" starttime="20170912 09:39:55.393"></status>
+</kw>
+<kw name="Search for Products" library="Amazon">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20170912 09:39:59.087" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20170912 09:40:01.221" starttime="20170912 09:39:59.086"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:01.221" starttime="20170912 09:39:59.086"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.com</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:40:01.355" starttime="20170912 09:40:01.221"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:01.355" starttime="20170912 09:40:01.221"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR_TEXT_BOX}</arg>
+<arg>"${SEARCH_TERM}"</arg>
+</arguments>
+<msg timestamp="20170912 09:40:01.356" level="INFO">Typing text '"Ferrari 458"' into text field 'id=twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20170912 09:40:03.411" starttime="20170912 09:40:01.356"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20170912 09:40:03.412" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" endtime="20170912 09:40:04.862" starttime="20170912 09:40:03.411"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>id=s-result-count</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:40:05.520" starttime="20170912 09:40:04.862"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies element identified by `locator` contains text `expected`.</doc>
+<arguments>
+<arg>id=s-result-count</arg>
+<arg>"${SEARCH_TERM}"</arg>
+</arguments>
+<msg timestamp="20170912 09:40:05.520" level="INFO">Verifying element 'id=s-result-count' contains text '"Ferrari 458"'.</msg>
+<status status="PASS" endtime="20170912 09:40:05.622" starttime="20170912 09:40:05.520"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:05.623" starttime="20170912 09:39:59.085"></status>
+</kw>
+<kw name="Select Product from Search Results" library="Amazon">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>css=#result_0 a.s-access-detail-page</arg>
+</arguments>
+<msg timestamp="20170912 09:40:05.625" level="INFO">Clicking link 'css=#result_0 a.s-access-detail-page'.</msg>
+<status status="PASS" endtime="20170912 09:40:08.365" starttime="20170912 09:40:05.625"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Back to search results</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:40:08.418" starttime="20170912 09:40:08.365"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:08.418" starttime="20170912 09:40:05.624"></status>
+</kw>
+<kw name="Add Product to Cart" library="Amazon">
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>id=add-to-cart-button</arg>
+</arguments>
+<msg timestamp="20170912 09:40:08.419" level="INFO">Clicking button 'id=add-to-cart-button'.</msg>
+<status status="PASS" endtime="20170912 09:40:08.780" starttime="20170912 09:40:08.419"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20170912 09:40:11.781" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20170912 09:40:11.781" starttime="20170912 09:40:08.781"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//*[@id="a-popover-4"]/div/div[1]/button</arg>
+</arguments>
+<msg timestamp="20170912 09:40:11.782" level="INFO">Clicking element 'xpath=//*[@id="a-popover-4"]/div/div[1]/button'.</msg>
+<status status="PASS" endtime="20170912 09:40:13.420" starttime="20170912 09:40:11.781"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" endtime="20170912 09:40:13.464" starttime="20170912 09:40:13.420"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:13.464" starttime="20170912 09:40:08.419"></status>
+</kw>
+<kw name="Begin Checkout" library="Amazon">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>id=hlb-ptc-btn-native</arg>
+</arguments>
+<msg timestamp="20170912 09:40:13.466" level="INFO">Clicking link 'id=hlb-ptc-btn-native'.</msg>
+<status status="PASS" endtime="20170912 09:40:14.539" starttime="20170912 09:40:13.465"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>id=signInSubmit</arg>
+</arguments>
+<msg timestamp="20170912 09:40:14.578" level="INFO">Current page contains element 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20170912 09:40:14.579" starttime="20170912 09:40:14.539"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:14.579" starttime="20170912 09:40:13.465"></status>
+</kw>
+<kw type="teardown" name="End Web Test" library="Common">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170912 09:40:17.621" starttime="20170912 09:40:14.581"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:17.621" starttime="20170912 09:40:14.580"></status>
+</kw>
+<doc>This is the basic info about the test case</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20170912 09:40:17.622" critical="yes" starttime="20170912 09:39:55.392"></status>
+</test>
+<kw type="teardown" name="Cleanup Testing Data" library="Common">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>I am cleaning up the test data...</arg>
+</arguments>
+<msg timestamp="20170912 09:40:17.624" level="INFO">I am cleaning up the test data...</msg>
+<status status="PASS" endtime="20170912 09:40:17.624" starttime="20170912 09:40:17.624"></status>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20170912 09:40:17.625" starttime="20170912 09:40:17.625"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:17.625" starttime="20170912 09:40:17.624"></status>
+</kw>
+<status status="PASS" endtime="20170912 09:40:17.625" starttime="20170912 09:39:31.663"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Current</stat>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Amazon" pass="2">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
